@@ -1,0 +1,60 @@
+<h1>Ingresos</h1>
+<form (ngSubmit)="agregarIngreso()">
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" [(ngModel)]="ingreso.nombre" name="name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="detail">Detalle:</label>
+      <textarea id="detail" [(ngModel)]="ingreso.detalle" name="detail" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="Price">Precio:</label>
+      <input type="number" id="Price" [(ngModel)]="ingreso.monto" name="Price" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="category">Categoría:</label>
+      <select id="category" [(ngModel)]="ingreso.categoria" name="category" class="form-control" required>
+        <option *ngFor="let categoria of categorias" [value]="categoria.nombre">{{ categoria.nombre }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" [(ngModel)]="ingreso.fecha" name="date" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar ingreso</button>
+  </form>
+
+<h2>Listado de Ingresos</h2>
+
+<div class="form-group">
+  <label for="categoryFilter">Categoría:</label>
+  <select id="categoryFilter" [(ngModel)]="categoriaSeleccionada" name="categoryFilter" class="form-control" required>
+    <option value="">Todas las categorías</option>
+    <option *ngFor="let categoria of categorias" [value]="categoria.nombre">{{ categoria.nombre }}</option>
+  </select>
+</div>
+
+<!-- Botón para aplicar el filtro -->
+<button (click)="aplicarFiltro()" class="btn btn-primary">Filtrar</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Detalle</th>
+      <th>Precio</th>
+      <th>Categoría</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ingreso of ingresos">
+      <td>{{ ingreso.nombre }}</td>
+      <td>{{ ingreso.detalle }}</td>
+      <td>{{ ingreso.monto | currency }}</td>
+      <td>{{ ingreso.categoria }}</td>
+      <td>{{ ingreso.fecha | date }}</td>
+    </tr>
+  </tbody>
+</table>
