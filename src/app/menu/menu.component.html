@@ -1,8 +1,9 @@
-<nav>
-    <ul>
-      <li><a (click)="cambiarSeccion('gastos')">Gastos</a></li>
-      <li><a (click)="cambiarSeccion('ingresos')">Ingresos</a></li>
-      <li><a (click)="cambiarSeccion('categorias')">Agregar categoría</a></li>
-      <li><a (click)="cambiarSeccion('balance')">Balance de gastos</a></li>
-    </ul>
+<nav class="flex justify-between items-center p-4 bg-green-300">
+    <h1 class="font-bold text-2xl text-slate-700">Gestion finanzas</h1>
+    <div class="flex items-center justify-center rounded-md drop-shadow-md p-2">
+      <a href="/" class="cursor-pointer mr-3 p-2 text-slate-700 rounded-lg hover:bg-slate-200 hover:text-slate-900">Gastos</a>
+      <a href="/ingresos" class="cursor-pointer mr-3 p-2 text-slate-700 rounded-lg hover:bg-slate-200 hover:text-slate-900">Ingresos</a>
+      <a href="categorias" class="cursor-pointer mr-3 p-2 text-slate-700 rounded-lg hover:bg-slate-200 hover:text-slate-900">Categorías</a>
+      <a href="balance" class="cursor-pointer mr-3 p-2 text-slate-700 rounded-lg hover:bg-slate-200 hover:text-slate-900">Balance de gastos</a>
+    </div>
 </nav>

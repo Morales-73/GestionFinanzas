@@ -1,5 +1,18 @@
-<h1>Balance de gastos</h1>
+<div class="flex flex-col justify-center items-center">
+    <h1 class="font-bold text-2xl text-slate-700 m-5">Balance de gastos</h1>
 
-<b><p>Ingreso Total: {{ ingresoTotal | currency }}</p></b>
-<b><p>Gasto Total: {{ gastoTotal | currency }}</p></b>
-<b><p>Balance Total: {{ balanceTotal | currency }}</p></b>
+    <div class="m-5 flex justify-evenly w-full">
+        <div class="flex items-center">
+            <span class="font-bold text-xl mr-2">Ingreso Total:</span>
+            <p>{{ ingresoTotal | currency }}</p> 
+        </div>
+        <div class="flex items-center">
+            <span class="font-bold text-xl mr-2">Gasto Total:</span>
+            <p> {{ gastoTotal | currency }}</p>
+        </div>
+        <div class="flex items-center">
+            <span class="font-bold text-xl mr-2">Balance Total:</span>
+            <p> {{ balanceTotal | currency }}</p>
+        </div>
+    </div>
+</div>

@@ -13,6 +13,9 @@ export class BalanceComponent {
   gastos: Gasto[] = [];
   ingresos:Ingreso[] = [];
 
+  listaPrecios: number[] = []
+  listaMontos: number[] = []
+
   ingresoTotal: number = 0; // Variable para almacenar el ingreso total
   gastoTotal: number = 0;   // Variable para almacenar el gasto total
   balanceTotal: number = 0; // Variable para almacenar el balance total
@@ -27,14 +30,12 @@ export class BalanceComponent {
 
   calcularTotales() {
     // Calcular el ingreso total sumando todos los ingresos
-    // this.ingresoTotal = this.gastos.map( gasto => gasto.precio);
-    console.log(this.gastos)
+    this.gastos.map(gasto => this.gastoTotal += gasto.precio)
 
     // Calcular el gasto total sumando todos los gastos
-    // this.gastoTotal = this.ingresos;
-    console.log(this.ingresos)
+    this.ingresos.map(ingreso => this.ingresoTotal += ingreso.monto)
 
     // Calcular el balance total
-    // this.balanceTotal = this.ingresoTotal + this.gastoTotal;
+    this.balanceTotal = this.ingresoTotal + this.gastoTotal;
   }
 }

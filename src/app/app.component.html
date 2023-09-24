@@ -1,15 +1,5 @@
-<h1>Gestion finanzas</h1>
-
-<app-menu></app-menu>
-
-<!-- Componente de Gastos -->
-<app-gastos *ngIf="navegacionService.seccionActual === 'gastos'"></app-gastos>
-
-<!-- Componente de Ingresos -->
-<app-ingresos *ngIf="navegacionService.seccionActual === 'ingresos'"></app-ingresos>
-
-<!-- Componente de Categorías -->
-<app-categorias *ngIf="navegacionService.seccionActual === 'categorias'"></app-categorias>
-
-<!-- Componente de Balance -->
-<app-balance *ngIf="navegacionService.seccionActual === 'balance'"></app-balance>
+<main class="h-screen">
+    <!-- Componente Menu -->
+    <app-menu></app-menu>
+    <router-outlet></router-outlet>
+</main>

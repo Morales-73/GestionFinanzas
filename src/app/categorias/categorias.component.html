@@ -1,12 +1,12 @@
-<h1>Agregar categoría</h1>
-<form (submit)="agregarCategoria()">
-    <div class="form-group">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" [(ngModel)]="categoria.nombre" name="name" class="form-control" required>
+<h1 class="font-bold text-2xl m-5 text-slate-700 text-center">Agregar categoría</h1>
+<form (submit)="agregarCategoria()" class="flex items-center mx-5 justify-center">
+    <div class="mr-3">
+      <label for="name" class="font-medium mr-3">Nombre</label>
+      <input type="text" id="name" [(ngModel)]="categoria.nombre" name="name" class="border rounded-md" required>
     </div>
-    <div class="form-group">
-      <label for="detail">Detalle:</label>
-      <textarea id="detail" [(ngModel)]="categoria.detalle" name="detail" class="form-control"></textarea>
+    <div class="mr-3">
+      <label for="detail" class="font-medium mr-3">Detalle</label>
+      <input id="detail" [(ngModel)]="categoria.detalle" name="detail" class="border rounded-md">
     </div>
-    <button type="submit" class="btn btn-primary">Guardar Categoría</button>
+    <button type="submit" class="bg-slate-500 text-slate-200 px-4 py-1 rounded-md hover:bg-slate-200 hover:text-slate-900">Guardar</button>
 </form>

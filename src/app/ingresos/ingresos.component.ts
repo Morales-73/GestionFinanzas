@@ -29,10 +29,10 @@ export class IngresosComponent {
 
     // Limpiar el formulario
     this.ingreso = {
-      id: 0,
+      id: null,
       nombre: '',
       detalle: '',
-      monto: 0,
+      monto: null,
       categoria: '',
       fecha: new Date()
     };

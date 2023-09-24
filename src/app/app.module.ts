@@ -8,6 +8,8 @@ import { IngresosComponent } from './ingresos/ingresos.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { MenuComponent } from './menu/menu.component';
 import { BalanceComponent } from './balance/balance.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { BalanceComponent } from './balance/balance.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

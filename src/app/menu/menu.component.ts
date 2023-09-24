@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavegacionService } from '../services/navegacion/navegacion.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +6,5 @@ import { NavegacionService } from '../services/navegacion/navegacion.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  constructor(private navegacionService : NavegacionService ) {}
-
-  cambiarSeccion(seccion:string){
-    this.navegacionService.cambiarSeccion(seccion);
-  }
+  constructor() {}
 }

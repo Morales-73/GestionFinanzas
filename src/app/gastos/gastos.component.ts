@@ -30,13 +30,14 @@ export class GastosComponent {
 
     // Limpiar el formulario
     this.gasto = {
-      id: 0,
+      id: null,
       nombre: '',
       detalle: '',
-      precio: 0,
+      precio: null,
       categoria: '',
       fecha: new Date()
-    };
+    }
+    
   }
 
   // Función para aplicar el filtro por categoría
